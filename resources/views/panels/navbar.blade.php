@@ -5,7 +5,7 @@
       <li class="nav-item">
         <a class="navbar-brand" href="{{url('/')}}">
             <span class="brand-logo">
-                <img src="{{ asset('images/logo/logo.png') }}" alt="{{ config('app.name') }}" title="{{ config('app.name') }}" style="max-width: 180px;" />
+                <img src="{{ asset('images/logo/logo-nova.png') }}" alt="{{ config('app.name') }}" title="{{ config('app.name') }}" style="max-width: 180px;" />
             </span>
         </a>
       </li>

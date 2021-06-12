@@ -16,13 +16,13 @@ $configData = Helper::applClasses();
     <div class="auth-inner row m-0">
         <!-- Brand logo-->
         <a class="d-none d-lg-block d-md-none brand-logo" href="javascript:void(0);">
-            <img src="{{ asset('images/logo/logo.png') }}" alt="{{ config('app.name') }}" title="{{ config('app.name') }}" />
+           
         </a>
         <!-- /Brand logo-->
         <!-- Left Text-->
         <div class="d-none d-lg-flex col-lg-8 align-items-center p-5">
             <div class="w-100 d-lg-flex align-items-center justify-content-center px-5">
-                <img class="img-fluid" src="{{asset('images/pages/login.png')}}" alt="" />
+                <img class="img-fluid" src="{{asset('images/pages/nutri.jpg')}}" alt="" />
             </div>
         </div>
         <!-- /Left Text-->
@@ -30,7 +30,7 @@ $configData = Helper::applClasses();
         <div class="d-flex col-lg-4 align-items-center auth-bg px-2 p-lg-5">
             <div class="col-12 col-sm-8 col-md-6 col-lg-12 px-xl-2 mx-auto">
                 <div class="col-12 text-center"> 
-                    <img class="img-fluid" src="{{ asset('images/logo/logo.png') }}" alt="{{ config('app.name') }}" title="{{ config('app.name') }}" />
+                    <img class="img-fluid" src="{{ asset('images/logo/logo-nova.png') }}" alt="{{ config('app.name') }}" title="{{ config('app.name') }}" />
                     <br><br>
                 </div>
                 <h2 class="card-title font-weight-bold mb-1">Bem vindo! &#x1F44B;</h2>

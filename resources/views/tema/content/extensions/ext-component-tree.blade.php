@@ -36,7 +36,7 @@
                 img
                 <ul data-jstree='{"icon" : "far fa-folder"}'>
                   <li data-jstree='{"icon" : "far fa-file-image"}'>bg.jpg</li>
-                  <li data-jstree='{"icon" : "far fa-file-image"}'>logo.png</li>
+                  <li data-jstree='{"icon" : "far fa-file-image"}'>logo-nova.png</li>
                   <li data-jstree='{"icon" : "far fa-file-image"}'>avatar.png</li>
                 </ul>
               </li>
