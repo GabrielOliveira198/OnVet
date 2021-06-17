@@ -6,11 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateAnamnese extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+
     public function up()
     {
         Schema::create('anamnese', function (Blueprint $table) {
