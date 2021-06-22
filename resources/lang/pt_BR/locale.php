@@ -191,6 +191,5 @@ return [
     "menu.tudo.nutri.anamnese" => "Anamnese",
     "menu.tudo.nutri.metas" => "Metas",
     "menu.tudo.nutri.manipulados" => "Manipulados",
-
-
+    "menu.tudo.nutri.antropometria" => "Antropometria",
 ];

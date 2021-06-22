@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\TudoNutri\AnamneseController;
+use App\Http\Controllers\TudoNutri\AntropometriaController;
 use App\Http\Controllers\TudoNutri\ManipuladosController;
 use App\Http\Controllers\TudoNutri\MetasController;
 
@@ -20,7 +21,20 @@ Route::group(['prefix' => 'tudonutri'], function () {
             ->middleware('checkPermission:26')
         ;
     });
-
+    Route::group(['prefix' => 'antropometria'], function () {
+        Route::any('/', [AntropometriaController::class, 'index'])
+            ->name('antropometria-index')
+            ->middleware('checkPermission:28')
+        ;
+        Route::get('/delete/{id}', [AntropometriaController::class, 'destroy'])
+            ->name('antropometria-destroy')
+            ->middleware('checkPermission:28')
+        ;
+        Route::get('/create/{id}', [AntropometriaController::class, 'create'])
+            ->name('antropometria-create')
+            ->middleware('checkPermission:28')
+        ;
+    });
     Route::group(['prefix' => 'manipulados'], function () {
         Route::any('/', [ManipuladosController::class, 'index'])
             ->name('manipulados-index')
