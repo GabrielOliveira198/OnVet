@@ -190,5 +190,7 @@ return [
     "menu.tudo.nutri" => "Tudo Nutri",
     "menu.tudo.nutri.anamnese" => "Anamnese",
     "menu.tudo.nutri.metas" => "Metas",
+    "menu.tudo.nutri.manipulados" => "Manipulados",
+
 
 ];

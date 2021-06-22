@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\TudoNutri\AnamneseController;
+use App\Http\Controllers\TudoNutri\ManipuladosController;
 use App\Http\Controllers\TudoNutri\MetasController;
 
 Route::group(['prefix' => 'tudonutri'], function () {
@@ -19,6 +20,21 @@ Route::group(['prefix' => 'tudonutri'], function () {
             ->middleware('checkPermission:26')
         ;
     });
+
+    Route::group(['prefix' => 'manipulados'], function () {
+        Route::any('/', [ManipuladosController::class, 'index'])
+            ->name('manipulados-index')
+            ->middleware('checkPermission:29')
+        ;
+        Route::get('/delete/{id}', [ManipuladosController::class, 'destroy'])
+            ->name('manipulados-destroy')
+            ->middleware('checkPermission:29')
+        ;
+        Route::get('/create/{id}', [ManipuladosController::class, 'create'])
+            ->name('manipulados-create')
+            ->middleware('checkPermission:29')
+        ;
+    });
     
     Route::group(['prefix' => 'metas'], function () {
         Route::any('/', [MetasController::class, 'index'])
@@ -34,5 +50,4 @@ Route::group(['prefix' => 'tudonutri'], function () {
             ->middleware('checkPermission:27')
         ;
     });
-
 });

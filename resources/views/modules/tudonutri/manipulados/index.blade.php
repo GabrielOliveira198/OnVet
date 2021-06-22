@@ -1,28 +1,23 @@
 @extends('layouts/contentLayoutMaster')
 
-@section('title', 'Metas')
+@section('title', 'Manipulados')
 
 @section('content')
 <div class="row" id="table-hover-row">
     <div class="col-12">
-      <div class="card">
-       <div class="card-header">
-           <h4 class="card-title">
-               Metas              
-            </h4>   
-          <div style="float: right;">
-            <a href="{{ url('tudonutri/metas/create/0') }}" class="btn btn-outline-primary waves-effect">
-              <i data-feather="plus-circle" class="mr-50"></i>
-                  <span>Novo</span>
-              </a>
-        </div>
-    </div>  
-       <div class="card-header">
-           <h4 class="card-title">
-           <b>Trabalhar com metas pode ser um importante aliado quando o objetivo é uma reeducação alimentar ou mudança de hábito.</b>              
-            </h4>   
-    </div>  
-         <div class="card-body">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">
+                    Manipulados             
+                </h4>
+                <div style="float: right;">
+                    <a href="{{ url('tudonutri/manipulados/create/0') }}" class="btn btn-outline-primary waves-effect">
+                        <i data-feather="plus-circle" class="mr-50"></i>
+                        <span>Nova Fórmula</span>
+                    </a>
+                </div>
+            </div>
+            <div class="card-body">
                 @include('shared.alerts')
                 <form class="form-horizontal form-label-left" id="formSearch" method="post">
                     {!! csrf_field() !!}
@@ -58,9 +53,9 @@
                                     type="submit" name="export" value="PDF">
                                     <i data-feather='download'></i>
                                     <span>PDF</span>
-                                </button>   
+                                </button>
                             </div>
-                        </div>            
+                        </div>
                     </div>
                 </form>
             </div>
@@ -69,44 +64,28 @@
                     <thead>
                         <tr>
                             <th>Nome</th>
-                            <th>Descrição</th>
-                            <th>Data de ínicio</th>
-                            <th>Data de término</th>
-                            <th>Frequência planejada</th>
-                            <th>Vez(es) por</th>
+                            <th>Fórmula</th>
                             <th style="width: 5%;">Ações</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($metas as $metas)
+                        @foreach($manipulados as $manipulados)
                         <tr>
                             <td>
-                                {{ $metas->nome_metas }}
+                                {{ $manipulados->nome_formula }}
                             </td>
                             <td>
-                                {!! nl2br($metas->descricao) !!}
-                            </td>    
-                            <td>
-                                {!! nl2br($metas->data_inicio) !!}
-                            </td>      
-                            <td>
-                                {!! nl2br($metas->data_termino) !!}
-                            </td>     
-                            <td>
-                                {!! nl2br($metas->frequencia) !!}
-                            </td>
-                            <td>
-                                {!! nl2br($metas->vezes_por) !!}
-                            </td>                       
+                                {!! nl2br($manipulados->formula) !!}
+                            </td>                                 
                             <td nowrap>
-                                <a href="{{ url('tudonutri/metas/create') }}/{{ $metas->id ?? null }}"
+                                <a href="{{ url('tudonutri/manipulados/create') }}/{{ $manipulados->id ?? null }}"
                                     class="item-show" title="Editar"
                                 >
                                     <i data-feather="edit-2" class="mr-50"></i>
                                 </a>
                                 <a  href="javascript:void(0);" class="item-show" 
                                     alt="Apagar" title="Apagar"
-                                   onclick="deleteItem('{{ url('tudonutri/metas/delete') }}/{{ $metas->id ?? null }}');"
+                                   onclick="deleteItem('{{ url('tudonutri/manipulados/delete') }}/{{ $manipulados->id ?? null }}');"
                                 >
                                     <i data-feather="trash" class="mr-50"></i>
                                 </a>

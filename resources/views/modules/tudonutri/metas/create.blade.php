@@ -13,7 +13,6 @@
           </div>
             <div class="card-body">
                <div class = "col-12">
-              <b>Trabalhar com metas pode ser um importante aliado quando o objetivo é uma reeducação alimentar ou mudança de hábito.</b>
                </div>
                <br>
                 <form id="formMetasData" action="{{ url('data/tudonutri/metas/save') }}" class="form">
