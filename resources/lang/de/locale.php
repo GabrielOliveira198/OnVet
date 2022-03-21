@@ -106,7 +106,6 @@ return [
   "Maintenance" => "Instandhaltung",
   "Profile" => "Profil",
   "FAQ" => "FAQ",
-  "paciente" => "paciente",
   "Knowledge Base" => "Wissensbasis",
   "Search" => "Suche",
   "Invoice" => "Rechnung",

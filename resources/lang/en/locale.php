@@ -106,7 +106,6 @@ return [
     "Maintenance" => "Maintenance",
     "Profile" => "Profile",
     "FAQ" => "FAQ",
-    "paciente" => "paciente",
     "Knowledge Base" => "Knowledge Base",
     "Search" => "Search",
     "Invoice" => "Invoice",
