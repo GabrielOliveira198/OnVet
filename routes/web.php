@@ -34,9 +34,7 @@ Route::middleware(['auth'])->group(function () {
     });
 
     include('modules/general/security.php');
-    include('modules/cadastro/index.php');    
-    include('modules/paciente/index.php');  
-    include('modules/tudonutri/index.php');  
+    include('modules/cadastro/index.php');      
     include('modules/tema.php');
     
     include('modules/data/endpoints.php');

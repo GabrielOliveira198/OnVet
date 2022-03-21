@@ -185,11 +185,5 @@ return [
     "menu.cadastros" => "Cadastros",
     "menu.cadastros.nivel-acesso" => "Nível de Acesso",
     "menu.cadastros.usuarios" => "Usuários",
-    "menu.paciente" => "Pacientes",
-    "menu.paciente.pacientes" => "Pacientes",
     "menu.tudo.nutri" => "Tudo Nutri",
-    "menu.tudo.nutri.anamnese" => "Anamnese",
-    "menu.tudo.nutri.metas" => "Metas",
-    "menu.tudo.nutri.manipulados" => "Manipulados",
-    "menu.tudo.nutri.antropometria" => "Antropometria",
 ];

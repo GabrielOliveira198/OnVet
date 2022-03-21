@@ -38,8 +38,8 @@ $configData = Helper::applClasses();
                 <form class="auth-login-form mt-2" action="" method="POST">
                     <div class="form-group">
                         <label class="form-label" for="login-email">Email</label>
-                        <input class="form-control" id="login-email" type="text" 
-                            name="email" placeholder="joao@exemplo.com"
+                        <input class="form-control" id="login-email" typejoao="text" 
+                            name="email" placeholder="@exemplo.com"
                             aria-describedby="email" autofocus="" tabindex="1"
                             value="{{ old('email') }}" />
                     </div>
