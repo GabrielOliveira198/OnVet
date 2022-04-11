@@ -9,5 +9,5 @@ Route::group(['prefix' => 'data'], function () {
     Route::post('exemplo/delete', [ExemploController::class, 'destroy'])->name('exemplo-delete');
 
     include('security.php');
-    include('tudonutri.php');
+    include('cadastro.php');
 });

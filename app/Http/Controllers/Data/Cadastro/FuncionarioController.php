@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Data\Funcionario;
+namespace App\Http\Controllers\Data\Cadastro;
 
 use App\Http\Controllers\Controller;
-use App\Models\Paciente\Funcionario;
+use App\Models\Cadastro\Funcionario;
 use Illuminate\Http\Request;
 
 use Exception;
@@ -29,14 +29,17 @@ class FuncionarioController extends Controller
             $funcionario->cpf = $request->cpf;
             $funcionario->uf = $request->uf;
             $funcionario->cidade = $request->cidade;
+            $funcionario->ativo = $request->ativo ?? 0;
 
             $funcionario->save();
 
             return $funcionario;
+
         } catch (Exception $ex) {
             return response()->json([
-                'message' => 'Ocorreu um Erro ao salvar o Paciente!',
-                'exception' => $ex->getMessage()], 404);
+                'message' => 'Ocorreu um Erro ao salvar o Funcionário!',
+                'exception' => $ex->getMessage()
+            ], 404);         
         }
     }
 }
