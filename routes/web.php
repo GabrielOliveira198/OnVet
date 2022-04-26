@@ -36,6 +36,5 @@ Route::middleware(['auth'])->group(function () {
     include('modules/general/security.php');
     include('modules/cadastro/index.php');      
     include('modules/tema.php');
-    
     include('modules/data/endpoints.php');
 });

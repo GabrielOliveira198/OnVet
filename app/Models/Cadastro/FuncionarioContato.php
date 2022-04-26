@@ -6,21 +6,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use OwenIt\Auditing\Contracts\Auditable;
 
-class Funcionario extends Model implements Auditable
+class FuncionarioContato extends Model implements Auditable
 {
     use HasFactory, \OwenIt\Auditing\Auditable;
 
-    protected $table = "funcionario";
-    protected $sexos = [
-        'M' => 'Masculino',
-        'F' => 'Feminino',
-        'O' => 'Outros',
-    ];
-
-    public function contatos()
-    {
-        return $this->hasMany(FuncionarioContato::class, 'funcionario_id');
-    }
+    protected $table = "funcionario_contato";
 
     public function scopeFiltros($query, $request)
     {
@@ -38,13 +28,4 @@ class Funcionario extends Model implements Auditable
         return $query->where('ativo', 1);
     }
 
-    public function getSexo()
-    {
-        return $this->sexos[$this->sexo];
-    }
-
-    public function getSexos()
-    {
-        return $this->sexos;
-    }
 }

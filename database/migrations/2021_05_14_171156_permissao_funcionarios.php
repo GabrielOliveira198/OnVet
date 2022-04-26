@@ -15,7 +15,7 @@ class PermissaoFuncionarios extends Migration
                 'position' => '3',
                 'permission_id' => 1,
                 'name' => 'menu.cadastros.funcionarios',
-                'icon' => 'briefcase',
+                'icon' => 'users',
                 'url' => 'cadastros/funcionarios',
             ]
         );

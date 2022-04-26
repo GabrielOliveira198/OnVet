@@ -9,20 +9,24 @@ use App\Models\Cadastro\Funcionario;
 use Maatwebsite\Excel\Facades\Excel;
 
 class FuncionarioController extends Controller
-{
+{ 
     protected $model = Funcionario::class;
-
+    
     protected $breadcrumbs = [
         ['name' => "Cadastros"],
         ['link' => "/cadastros/funcionarios", 'name' => "Funcionários"]
     ];
-
+        
     public function index(Request $request)
     {
-       
         $breadcrumbs = $this->breadcrumbs;
-        $funcionarios = Funcionario::filtros($request)        
-            ->orderBy('id', 'DESC')
+        $funcionarios = Funcionario::filtros($request)
+        ->withCount([
+            'contatos as contato' => function ($query) {
+                $query->where('nome',"Ale");            
+            }
+        ])
+            ->orderBy('nome', 'ASC')
         ;
 
         if (isset($request->export) && $request->export == 'PDF') {
@@ -37,9 +41,7 @@ class FuncionarioController extends Controller
 
 
         $dataView = compact('breadcrumbs', 'request', 'funcionarios');
-        return view('modules/cadastro/funcionario/index', $dataView);  
-        
-       
+        return view('modules/cadastro/funcionario/index', $dataView);       
 
     }
     private function indexPdf($funcionarios)
@@ -78,6 +80,7 @@ class FuncionarioController extends Controller
         $breadcrumbs = $this->breadcrumbs;
         $funcionario = $this->model::findOrNew($id);
         $dataView = compact('breadcrumbs', 'funcionario');
-        return view('modules/cadastro/funcionario/create', $dataView);       
+        return view('modules/cadastro/funcionario/create', $dataView);
+    
     }
 }
