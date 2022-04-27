@@ -4,7 +4,7 @@
         <table class="border-bottom">
             <tr>
                 <td style="width: 180px">
-                    <img class="logo" src="{{ asset('images/logo/pata.png') }}" style="max-width: 170px; max-height: 90px;">
+                    <img class="logo" src="{{ asset('images/logo/on_vet.png') }}" style="max-width: 170px; max-height: 90px;">
                 </td>
                 <td style="text-align:center">
                     <h1 style="margin-bottom: -4px">
@@ -26,8 +26,8 @@
                         <b>{{ config('app.name') }}</b>
                     </td>
                     <td style="text-align:right">
-                        <a class="ml-25" href="https://ifgoiano.edu.br/home/index.php" target="_blank">
-                            Instituto Federal Goiano
+                        <a class="ml-25" href="http://localhost/onvet/public/login" target="_blank">
+                            OnVet
                         </a>
                     </td>
                 </tr>
