@@ -186,6 +186,7 @@ return [
     "menu.cadastros.nivel-acesso" => "Nível de Acesso",
     "menu.cadastros.usuarios" => "Usuários",
     "menu.cadastros.funcionarios" => "Funcionários",
+    "menu.cadastros.tanques" => "Tanques",
     
     
 ];
