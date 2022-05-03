@@ -37,4 +37,5 @@ Route::middleware(['auth'])->group(function () {
     include('modules/cadastro/index.php');      
     include('modules/tema.php');
     include('modules/data/endpoints.php');
+    include('modules/duvida/index.php');
 });
