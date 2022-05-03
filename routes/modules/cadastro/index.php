@@ -44,17 +44,17 @@ Route::group(['prefix' => 'cadastros'], function () {
     Route::group(['prefix' => 'tes'], function () {
         // listagem
         Route::any('/', [TeController::class, 'index'])
-            ->name('tanques-index')
+            ->name('tes-index')
             ->middleware('checkPermission:8')
         ;
         // delete
         Route::get('/delete/{id}', [TeController::class, 'destroy'])
-            ->name('tanques-destroy')
+            ->name('tes-destroy')
             ->middleware('checkPermission:8')   
         ;
         // create
         Route::get('/create/{id}', [TeController::class, 'create'])
-            ->name('tanques-create')
+            ->name('tes-create')
             ->middleware('checkPermission:8')
         ;
     });
