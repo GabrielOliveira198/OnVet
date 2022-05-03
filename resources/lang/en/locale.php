@@ -188,6 +188,5 @@ return [
     "menu.cadastros.funcionarios" => "Funcionários",
     "menu.cadastros.tanques" => "Tanques",
     "menu.cadastros.tes" => "Protocolo TE",
-    
-    
+    "menu.cadastros.iatfs" => "Protocolo IATF",
 ];
