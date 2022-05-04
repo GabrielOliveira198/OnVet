@@ -1,6 +1,6 @@
 @extends('layouts/contentLayoutMaster')
 
-@section('title', ' Cadastrar protocolo TE')
+@section('title', ' Cadastrar protocolos indução')
 
 @section('content')
 <div class="row">
@@ -8,25 +8,25 @@
         <div class="card">
             <div class="card-header">
                 <h3>
-                    Cadastrar protocolo TE
+                    Cadastrar protocolos indução
                 </h3>
             </div>
             <div class="card-body">
-                <form id="formTeData" action="{{ url('data/cadastros/tes/save') }}" class="form">
-                    <input type="hidden" name="id" id="id" value="{{ $te->id ?? '0' }}" />
+                <form id="formInducaoData" action="{{ url('data/cadastros/inducoes/save') }}" class="form">
+                    <input type="hidden" name="id" id="id" value="{{ $inducao->id ?? '0' }}" />
                     <div class="row">
                         <div class="col-12">
                             <div class="form-group">
                                 <label class="form-label" for="nome">Nome</label>
                                 <input type="text" name="nome" class="form-control" id="nome"
-                                    placeholder="Digite o nome" value="{{ $te->nome ?? '' }}" required/>
+                                    placeholder="Digite o nome" value="{{ $inducao->nome ?? '' }}" required/>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-group">
                                 <label class="form-label" for="nome">Descrição</label>
                                 <textarea class="form-control" name="desc" id="desc" rows="5"
-                                    placeholder="Digite a descrição" required>{{ $te->desc ?? '' }}</textarea>
+                                    placeholder="Digite a descrição" required>{{ $inducao->desc ?? '' }}</textarea>
                             </div>
                         </div>
                     </div>
@@ -45,8 +45,8 @@
 @section('page-script')
 <script>
     $(document).ready(function(){
-        $('#formTeData').on('submit', function () {
-            postData('formTeData', '{{ url("cadastros/tes") }}');
+        $('#formInducaoData').on('submit', function () {
+            postData('formInducaoData', '{{ url("cadastros/inducoes") }}');
             return false;
         });
     });

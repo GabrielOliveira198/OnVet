@@ -4,6 +4,7 @@ use App\Http\Controllers\Cadastro\FuncionarioController;
 use App\Http\Controllers\Cadastro\TanqueController;
 use App\Http\Controllers\Cadastro\TeController;
 use App\Http\Controllers\Cadastro\IatfController;
+use App\Http\Controllers\Cadastro\InducaoController;
 
 Route::group(['prefix' => 'cadastros'], function () {
     Route::group(['prefix' => 'funcionarios'], function () {
@@ -75,6 +76,23 @@ Route::group(['prefix' => 'cadastros'], function () {
         Route::get('/create/{id}', [IatfController::class, 'create'])
             ->name('iatfs-create')
             ->middleware('checkPermission:10')
+        ;
+    });
+    Route::group(['prefix' => 'inducoes'], function () {
+        // listagem
+        Route::any('/', [InducaoController::class, 'index'])
+            ->name('inducoes-index')
+            ->middleware('checkPermission:12')
+        ;
+        // delete
+        Route::get('/delete/{id}', [InducaoController::class, 'destroy'])
+            ->name('inducoes-destroy')
+            ->middleware('checkPermission:12')   
+        ;
+        // create
+        Route::get('/create/{id}', [InducaoController::class, 'create'])
+            ->name('inducoes-create')
+            ->middleware('checkPermission:12')
         ;
     });
 });

@@ -189,6 +189,7 @@ return [
     "menu.cadastros.tanques" => "Tanques",
     "menu.cadastros.tes" => "Protocolo TE",
     "menu.cadastros.iatfs" => "Protocolo IATF",
+    "menu.cadastros.inducoes" => "Protocolos Indução",
     "menu.duvida" => "Dúvidas Gerais",
     "menu.duvida.faqs" => "Faqs",
 ];

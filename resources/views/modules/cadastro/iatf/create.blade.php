@@ -24,9 +24,9 @@
                         </div>
                         <div class="col-12">
                             <div class="form-group">
-                                <label class="form-label" for="desc">Descrição</label>
-                                <input type="text" name="desc" class="form-control" id="desc"
-                                    placeholder="Digite a descrição" value="{{ $iatf->desc ?? '' }}" required/>
+                                <label class="form-label" for="nome">Descrição</label>
+                                <textarea class="form-control" name="desc" id="desc" rows="5"
+                                    placeholder="Digite a descrição" required>{{ $iatf->desc ?? '' }}</textarea>
                             </div>
                         </div>
                     </div>
